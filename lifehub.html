@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeHub — Cuidando de quem mais importa</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="logo-text">Life<span style="color:white">Hub</span></div>
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="mainHeader">
+    <div class="logo" onclick="showPage('home')">
+      Life<span>Hub</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="mainNav">
+      <a onclick="showPage('home')" class="active" data-page="home">Home</a>
+      <a onclick="showPage('services')" data-page="services">Serviços</a>
+      <a onclick="showPage('plans')" data-page="plans">Planos</a>
+      <a onclick="showPage('about')" data-page="about">Sobre</a>
+      <a onclick="showPage('login')" data-page="login">Login</a>
+    </nav>
+    <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+  </header>
+
+  <!-- ==================== HOME ==================== -->
+  <div id="home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge animate-on-scroll">
+          +50.000 famílias atendidas em todo o Brasil
+        </div>
+        <h1 class="animate-on-scroll">
+          Cuidar da sua família<br>nunca foi tão <span class="highlight">fácil</span>
+        </h1>
+        <p class="animate-on-scroll">
+          A LifeHub conecta você a profissionais qualificados para cuidar da saúde,
+          dos idosos da família e dos seus animais de estimação.
+        </p>
+        <div class="hero-buttons animate-on-scroll">
+          <button class="btn btn-primary btn-lg" onclick="showPage('services')">Conhecer serviços</button>
+          <button class="btn btn-outline btn-lg" onclick="showPage('plans')">Ver planos</button>
+        </div>
+
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Como funciona</span>
+          <h2>Simples e rápido</h2>
+          <p>Em poucos passos você encontra o profissional ideal</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card animate-on-scroll" data-delay="0">
+            <div class="step-number">1</div>
+            <h3>Cadastre-se</h3>
+            <p>Crie sua conta gratuitamente em poucos minutos</p>
+          </div>
+          <div class="step-card animate-on-scroll" data-delay="100">
+            <div class="step-number">2</div>
+            <h3>Escolha o serviço</h3>
+            <p>Navegue pela nossa variedade de serviços disponíveis</p>
+          </div>
+          <div class="step-card animate-on-scroll" data-delay="200">
+            <div class="step-number">3</div>
+            <h3>Agende</h3>
+            <p>Selecione data, horário e o profissional de sua preferência</p>
+          </div>
+          <div class="step-card animate-on-scroll" data-delay="300">
+            <div class="step-number">4</div>
+            <h3>Aproveite</h3>
+            <p>Receba atendimento de qualidade no conforto do seu lar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-card animate-on-scroll">
+          <span class="stat-number" data-count="5000">0</span>
+          <span class="stat-label">Profissionais qualificados</span>
+        </div>
+        <div class="stat-card animate-on-scroll" data-delay="100">
+          <span class="stat-number" data-count="120">0</span>
+          <span class="stat-label">Cidades atendidas</span>
+        </div>
+        <div class="stat-card animate-on-scroll" data-delay="200">
+          <span class="stat-number" data-count="50000">0</span>
+          <span class="stat-label">Famílias satisfeitas</span>
+        </div>
+        <div class="stat-card animate-on-scroll" data-delay="300">
+          <span class="stat-number" data-count="200000">0</span>
+          <span class="stat-label">Serviços realizados</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Depoimentos</span>
+          <h2>O que nossos clientes dizem</h2>
+          <p>Histórias reais de quem já usa a LifeHub</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card animate-on-scroll">
+            <div class="stars">★★★★★</div>
+            <p>"A LifeHub transformou a forma como cuido da minha mãe. O cuidador é atencioso e pontual. Recomendo demais!"</p>
+            <div class="testimonial-author">
+              <div class="avatar">M</div>
+              <div class="info">
+                <strong>Maria Silva</strong>
+                <span>Cliente desde 2025</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll" data-delay="100">
+            <div class="stars">★★★★★</div>
+            <p>"Uso o serviço de passeador de cães toda semana. Meu dog adora! Profissionais super carinhosos."</p>
+            <div class="testimonial-author">
+              <div class="avatar">C</div>
+              <div class="info">
+                <strong>Carlos Oliveira</strong>
+                <span>Cliente desde 2024</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll" data-delay="200">
+            <div class="stars">★★★★★</div>
+            <p>"O nutricionista que encontrei pela plataforma mudou minha vida. Perdi 12kg com acompanhamento incrível!"</p>
+            <div class="testimonial-author">
+              <div class="avatar">A</div>
+              <div class="info">
+                <strong>Ana Beatriz</strong>
+                <span>Cliente desde 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="section-inner animate-on-scroll">
+        <h2>Pronto para começar?</h2>
+        <p>Junte-se a milhares de famílias que já confiam na LifeHub para cuidar de quem mais importa.</p>
+        <button class="btn btn-lg" onclick="showPage('login')">Começar agora</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== SERVIÇOS ==================== -->
+  <div id="services" class="hidden">
+
+    <!-- Cuidado Pessoal -->
+    <section class="section" style="padding-top:120px">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Saúde &amp; Bem-estar</span>
+          <h2>Serviços de cuidado pessoal</h2>
+          <p>Profissionais qualificados para cuidar da sua saúde e bem-estar</p>
+        </div>
+
+        <div class="service-categories">
+          <button class="category-btn active" onclick="filterServices('all', this)">Todos</button>
+          <button class="category-btn" onclick="filterServices('saude', this)">Saúde</button>
+          <button class="category-btn" onclick="filterServices('bemestar', this)">Bem-estar</button>
+          <button class="category-btn" onclick="filterServices('fitness', this)">Fitness</button>
+        </div>
+
+        <div class="services-grid" id="servicesPersonal">
+          <div class="service-card animate-on-scroll" data-category="bemestar">
+            <div class="service-icon"><i data-lucide="hand-heart" class="icon-service"></i></div>
+            <h3>Massagem Terapêutica</h3>
+            <p>Sessões de massagem relaxante e terapêutica no conforto da sua casa</p>
+            <span class="service-tag">Bem-estar</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="80" data-category="saude">
+            <div class="service-icon"><i data-lucide="salad" class="icon-service"></i></div>
+            <h3>Nutricionista</h3>
+            <p>Plano alimentar personalizado com acompanhamento contínuo</p>
+            <span class="service-tag">Saúde</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="160" data-category="saude">
+            <div class="service-icon"><i data-lucide="brain" class="icon-service"></i></div>
+            <h3>Psicólogo</h3>
+            <p>Atendimento psicológico online ou presencial com profissionais experientes</p>
+            <span class="service-tag">Saúde</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="240" data-category="saude">
+            <div class="service-icon"><i data-lucide="bone" class="icon-service"></i></div>
+            <h3>Fisioterapeuta</h3>
+            <p>Reabilitação e tratamentos fisioterapêuticos domiciliares</p>
+            <span class="service-tag">Saúde</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="320" data-category="fitness">
+            <div class="service-icon"><i data-lucide="dumbbell" class="icon-service"></i></div>
+            <h3>Personal Trainer</h3>
+            <p>Treinos personalizados em casa ou ao ar livre com acompanhamento profissional</p>
+            <span class="service-tag">Fitness</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="400" data-category="saude">
+            <div class="service-icon"><i data-lucide="stethoscope" class="icon-service"></i></div>
+            <h3>Enfermeiro Domiciliar</h3>
+            <p>Cuidados de enfermagem em casa com profissionais certificados</p>
+            <span class="service-tag">Saúde</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuidado com Idosos -->
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Terceira Idade</span>
+          <h2>Cuidado com idosos</h2>
+          <p>Carinho, atenção e profissionalismo para quem mais precisa</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon"><i data-lucide="users" class="icon-service"></i></div>
+            <h3>Cuidador de Idosos</h3>
+            <p>Profissionais treinados para acompanhar e cuidar de idosos com carinho</p>
+            <span class="service-tag">Cuidado</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="80">
+            <div class="service-icon"><i data-lucide="pill" class="icon-service"></i></div>
+            <h3>Auxílio com Medicamentos</h3>
+            <p>Controle e administração de medicamentos com segurança</p>
+            <span class="service-tag">Saúde</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="160">
+            <div class="service-icon"><i data-lucide="footprints" class="icon-service"></i></div>
+            <h3>Acompanhamento para Caminhadas</h3>
+            <p>Caminhadas assistidas para manter a mobilidade e saúde</p>
+            <span class="service-tag">Bem-estar</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="240">
+            <div class="service-icon"><i data-lucide="hospital" class="icon-service"></i></div>
+            <h3>Acompanhamento Hospitalar</h3>
+            <p>Presença e suporte durante internações e consultas médicas</p>
+            <span class="service-tag">Saúde</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="320">
+            <div class="service-icon"><i data-lucide="heart-pulse" class="icon-service"></i></div>
+            <h3>Monitoramento de Bem-estar</h3>
+            <p>Acompanhamento contínuo da saúde física e emocional</p>
+            <span class="service-tag">Monitoramento</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuidado com Pets -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Pet Care</span>
+          <h2>Cuidado com pets</h2>
+          <p>Seu pet merece o melhor cuidado, mesmo quando você não está</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon"><i data-lucide="dog" class="icon-service"></i></div>
+            <h3>Passeador de Cães</h3>
+            <p>Passeios diários com segurança e diversão para seu pet</p>
+            <span class="service-tag">Passeio</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="80">
+            <div class="service-icon"><i data-lucide="droplets" class="icon-service"></i></div>
+            <h3>Banho e Tosa</h3>
+            <p>Higiene e estética profissional para seu animal de estimação</p>
+            <span class="service-tag">Estética</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="160">
+            <div class="service-icon"><i data-lucide="paw-print" class="icon-service"></i></div>
+            <h3>Pet Sitter</h3>
+            <p>Cuidador que fica com seu pet enquanto você viaja ou trabalha</p>
+            <span class="service-tag">Cuidado</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="240">
+            <div class="service-icon"><i data-lucide="heart" class="icon-service"></i></div>
+            <h3>Cuidados para Pets Idosos</h3>
+            <p>Atenção especial e cuidados adaptados para pets na terceira idade</p>
+            <span class="service-tag">Especial</span>
+          </div>
+          <div class="service-card animate-on-scroll" data-delay="320">
+            <div class="service-icon"><i data-lucide="syringe" class="icon-service"></i></div>
+            <h3>Veterinário Domiciliar</h3>
+            <p>Consultas e vacinas sem precisar sair de casa</p>
+            <span class="service-tag">Saúde</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== PLANOS ==================== -->
+  <div id="plans" class="hidden">
+
+    <section class="section" style="padding-top:120px">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Planos</span>
+          <h2>Escolha o plano ideal</h2>
+          <p>Opções flexíveis que se adaptam às necessidades da sua família</p>
+        </div>
+
+        <div class="plans-grid">
+
+          <!-- Essencial -->
+          <div class="plan-card animate-on-scroll">
+            <div class="plan-icon"><i data-lucide="leaf" class="icon-xl icon-primary"></i></div>
+            <h3>Plano Essencial</h3>
+            <div class="plan-price">
+              <span class="currency">R$</span>
+              <span class="amount">29</span>
+              <span class="period">/ mês</span>
+            </div>
+            <ul class="plan-features">
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Acesso à plataforma</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Contratação de profissionais</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Avaliação de serviços</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Suporte por chat</li>
+            </ul>
+            <div class="plan-visits plan-visits-free">
+              <span class="visits-label">Pague apenas o que usar</span>
+            </div>
+            <button class="btn btn-outline-primary" onclick="showPage('login')">Começar agora</button>
+          </div>
+
+          <!-- Família -->
+          <div class="plan-card featured animate-on-scroll" data-delay="100">
+            <div class="plan-badge">Mais popular</div>
+            <div class="plan-icon"><i data-lucide="shield-check" class="icon-xl icon-primary"></i></div>
+            <h3>Plano Família</h3>
+            <div class="plan-price">
+              <span class="currency">R$</span>
+              <span class="amount">89</span>
+              <span class="period">/ mês</span>
+            </div>
+            <ul class="plan-features">
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> 10% desconto em serviços</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Agendamento recorrente</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Suporte prioritário</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Histórico completo</li>
+            </ul>
+            <div class="plan-visits">
+              <span class="visits-number">2</span>
+              <span class="visits-label">visitas incluídas / mês</span>
+            </div>
+            <button class="btn btn-primary" onclick="showPage('login')">Assinar agora</button>
+          </div>
+
+          <!-- Premium -->
+          <div class="plan-card animate-on-scroll" data-delay="200">
+            <div class="plan-icon"><i data-lucide="crown" class="icon-xl icon-primary"></i></div>
+            <h3>Plano Premium</h3>
+            <div class="plan-price">
+              <span class="currency">R$</span>
+              <span class="amount">159</span>
+              <span class="period">/ mês</span>
+            </div>
+            <ul class="plan-features">
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Todos benefícios anteriores</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> 20% desconto em serviços</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Agendamento antecipado</li>
+              <li><span class="check"><i data-lucide="check" class="icon-xs"></i></span> Gerente de conta dedicado</li>
+            </ul>
+            <div class="plan-visits">
+              <span class="visits-number">5</span>
+              <span class="visits-label">visitas incluídas / mês</span>
+            </div>
+            <button class="btn btn-outline-primary" onclick="showPage('login')">Assinar agora</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+          <p>Tudo o que você precisa saber sobre nossos planos</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Posso cancelar a qualquer momento?
+              <span class="arrow"><i data-lucide="chevron-down" class="icon-sm"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim! Todos os nossos planos podem ser cancelados a qualquer momento sem multa. O acesso continua até o fim do período já pago.</p>
+            </div>
+          </div>
+          <div class="faq-item animate-on-scroll" data-delay="80">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              As visitas incluídas acumulam?
+              <span class="arrow"><i data-lucide="chevron-down" class="icon-sm"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p>Não, as visitas gratuitas não acumulam entre meses. Se não forem usadas dentro do mês, expiram no final do período.</p>
+            </div>
+          </div>
+          <div class="faq-item animate-on-scroll" data-delay="160">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Posso trocar de plano depois?
+              <span class="arrow"><i data-lucide="chevron-down" class="icon-sm"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p>Claro! Você pode fazer upgrade ou downgrade do seu plano a qualquer momento. A mudança é aplicada no próximo ciclo de cobrança.</p>
+            </div>
+          </div>
+          <div class="faq-item animate-on-scroll" data-delay="240">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              As visitas incluem qualquer serviço?
+              <span class="arrow"><i data-lucide="chevron-down" class="icon-sm"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim, as visitas podem ser utilizadas para qualquer serviço disponível na plataforma, incluindo massagem, nutricionista, cuidador de idosos ou serviços pet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== SOBRE ==================== -->
+  <div id="about" class="hidden">
+
+    <section class="section" style="padding-top:120px">
+      <div class="section-inner">
+        <div class="about-grid animate-on-scroll">
+          <div class="about-content">
+            <div class="section-header" style="text-align:left;margin-bottom:30px">
+              <span class="tag">Sobre nós</span>
+              <h2>Conheça a LifeHub</h2>
+            </div>
+            <p>
+              A LifeHub foi criada para ajudar pessoas com rotinas ocupadas a cuidar melhor da saúde,
+              da família e dos seus animais de estimação.
+            </p>
+            <p>
+              Nossa plataforma conecta clientes a profissionais qualificados nas áreas de cuidado
+              pessoal, cuidado com idosos e cuidado com pets, garantindo qualidade, segurança e praticidade.
+            </p>
+            <div class="hero-buttons" style="justify-content:flex-start;margin-top:25px">
+              <button class="btn btn-primary" onclick="showPage('services')">Ver serviços</button>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="about-stat-block about-block-green">
+              <span class="about-stat-num">+5.000</span>
+              <span class="about-stat-lbl">Profissionais</span>
+            </div>
+            <div class="about-stat-block about-block-dark">
+              <span class="about-stat-num">120</span>
+              <span class="about-stat-lbl">Cidades atendidas</span>
+            </div>
+            <div class="about-stat-block about-block-mid">
+              <span class="about-stat-num">+200k</span>
+              <span class="about-stat-lbl">Serviços realizados</span>
+            </div>
+            <div class="about-stat-block about-block-accent">
+              <span class="about-stat-num">98%</span>
+              <span class="about-stat-lbl">Satisfação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Missão, Visão, Valores -->
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Nosso propósito</span>
+          <h2>Missão, Visão e Valores</h2>
+        </div>
+        <div class="mvv-grid">
+          <div class="mvv-card animate-on-scroll">
+            <div class="mvv-icon"><i data-lucide="target" class="icon-md icon-primary"></i></div>
+            <h3>Missão</h3>
+            <p>Facilitar o acesso a serviços de cuidado e bem-estar para melhorar a qualidade de vida das pessoas e seus entes queridos.</p>
+          </div>
+          <div class="mvv-card animate-on-scroll" data-delay="100">
+            <div class="mvv-icon"><i data-lucide="eye" class="icon-md icon-primary"></i></div>
+            <h3>Visão</h3>
+            <p>Ser a principal plataforma de conexão entre profissionais de cuidado e famílias no Brasil.</p>
+          </div>
+          <div class="mvv-card animate-on-scroll" data-delay="200">
+            <div class="mvv-icon"><i data-lucide="gem" class="icon-md icon-primary"></i></div>
+            <h3>Valores</h3>
+            <p>Cuidado genuíno, confiança, qualidade de excelência e amor pelos animais em tudo que fazemos.</p>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card animate-on-scroll">
+            <div class="value-icon"><i data-lucide="heart" class="icon-lg icon-primary"></i></div>
+            <h4>Cuidado</h4>
+            <p>Colocamos as pessoas em primeiro lugar</p>
+          </div>
+          <div class="value-card animate-on-scroll" data-delay="80">
+            <div class="value-icon"><i data-lucide="handshake" class="icon-lg icon-primary"></i></div>
+            <h4>Confiança</h4>
+            <p>Transparência em todas as relações</p>
+          </div>
+          <div class="value-card animate-on-scroll" data-delay="160">
+            <div class="value-icon"><i data-lucide="award" class="icon-lg icon-primary"></i></div>
+            <h4>Qualidade</h4>
+            <p>Excelência em cada atendimento</p>
+          </div>
+          <div class="value-card animate-on-scroll" data-delay="240">
+            <div class="value-icon"><i data-lucide="paw-print" class="icon-lg icon-primary"></i></div>
+            <h4>Amor pelos Animais</h4>
+            <p>Pets são família também</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="tag">Equipe</span>
+          <h2>Quem está por trás da LifeHub</h2>
+          <p>Um time apaixonado por cuidar das pessoas</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card animate-on-scroll">
+            <div class="team-avatar">R</div>
+            <h4>Rafael Costa</h4>
+            <span class="role">CEO &amp; Fundador</span>
+          </div>
+          <div class="team-card animate-on-scroll" data-delay="80">
+            <div class="team-avatar">J</div>
+            <h4>Juliana Mendes</h4>
+            <span class="role">Diretora de Operações</span>
+          </div>
+          <div class="team-card animate-on-scroll" data-delay="160">
+            <div class="team-avatar">L</div>
+            <h4>Lucas Ferreira</h4>
+            <span class="role">CTO</span>
+          </div>
+          <div class="team-card animate-on-scroll" data-delay="240">
+            <div class="team-avatar">P</div>
+            <h4>Patrícia Lima</h4>
+            <span class="role">Head de Qualidade</span>
+          </div>
+          <div class="team-card animate-on-scroll" data-delay="320">
+            <div class="team-avatar">D</div>
+            <h4>Diego Santos</h4>
+            <span class="role">Head de Marketing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== LOGIN ==================== -->
+  <div id="login" class="hidden">
+
+    <div class="auth-page">
+      <div class="auth-container">
+        <div class="auth-sidebar">
+
+          <!-- Conteúdo: Cliente -->
+          <div id="sidebarCliente">
+            <h2>Bem-vindo à <span style="color:var(--primary)">LifeHub</span></h2>
+            <p>Faça login para acessar sua conta e gerenciar seus serviços de cuidado.</p>
+            <ul class="features-list">
+              <li>
+                <span class="icon"><i data-lucide="calendar" class="icon-xs icon-primary"></i></span>
+                Agende serviços em poucos cliques
+              </li>
+              <li>
+                <span class="icon"><i data-lucide="clipboard-list" class="icon-xs icon-primary"></i></span>
+                Acompanhe seus atendimentos
+              </li>
+              <li>
+                <span class="icon"><i data-lucide="star" class="icon-xs icon-primary"></i></span>
+                Avalie profissionais
+              </li>
+              <li>
+                <span class="icon"><i data-lucide="credit-card" class="icon-xs icon-primary"></i></span>
+                Gerencie seu plano
+              </li>
+            </ul>
+          </div>
+
+          <!-- Conteúdo: Profissional -->
+          <div id="sidebarProfissional" style="display:none">
+            <h2>Área do <span style="color:var(--primary)">Profissional</span></h2>
+            <p>Gerencie sua agenda, seus clientes e acompanhe seus ganhos na plataforma.</p>
+            <ul class="features-list">
+              <li>
+                <span class="icon"><i data-lucide="calendar-check" class="icon-xs icon-primary"></i></span>
+                Gerencie sua agenda de atendimentos
+              </li>
+              <li>
+                <span class="icon"><i data-lucide="users" class="icon-xs icon-primary"></i></span>
+                Acesse o histórico dos seus clientes
+              </li>
+              <li>
+                <span class="icon"><i data-lucide="trending-up" class="icon-xs icon-primary"></i></span>
+                Acompanhe seus ganhos e métricas
+              </li>
+              <li>
+                <span class="icon"><i data-lucide="badge-check" class="icon-xs icon-primary"></i></span>
+                Destaque seu perfil na plataforma
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="auth-form-container">
+          <h2>Entrar</h2>
+          <p class="subtitle">Acesse sua conta para continuar</p>
+
+          <div class="auth-tabs">
+            <button class="auth-tab active" onclick="switchAuthTab('cliente', this)">
+              <i data-lucide="user" class="icon-xs"></i> Cliente
+            </button>
+            <button class="auth-tab" onclick="switchAuthTab('profissional', this)">
+              <i data-lucide="briefcase" class="icon-xs"></i> Profissional
+            </button>
+          </div>
+
+          <form onsubmit="login(event)">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="seu@gmail.com" id="loginGmail" required>
+            </div>
+            <div class="form-group">
+              <label>Senha</label>
+              <input type="password" placeholder="••••••••" id="loginPassword" required>
+            </div>
+
+            <input type="hidden" id="tipo" value="cliente">
+
+            <div class="form-footer">
+              <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer">
+                <input type="checkbox" style="width:auto;margin:0"> Lembrar-me
+              </label>
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px">Entrar</button>
+          </form>
+
+          <div class="login-hint">
+            <span>Demonstração profissional:</span>
+            <code>prof@lifehub.com</code> / <code>lifehub123</code>
+          </div>
+
+          <div class="form-divider">ou</div>
+
+          <p style="text-align:center;font-size:14px;color:var(--text-muted)">
+            Não tem conta?
+            <a href="#" style="color:var(--primary);font-weight:600">Cadastre-se grátis</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== DASHBOARD PROFISSIONAL ==================== -->
+  <div id="dashboard" class="hidden">
+
+    <div class="dash-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="dash-sidebar">
+        <div class="dash-logo">Life<span>Hub</span></div>
+        <div class="dash-profile">
+          <div class="dash-avatar">C</div>
+          <div>
+            <strong>Carlos Mendes</strong>
+            <span>Fisioterapeuta</span>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <a class="dash-nav-item active" onclick="dashTab('overview', this)">
+            <i data-lucide="layout-dashboard"></i> Visão geral
+          </a>
+          <a class="dash-nav-item" onclick="dashTab('agenda', this)">
+            <i data-lucide="calendar"></i> Agenda
+          </a>
+          <a class="dash-nav-item" onclick="dashTab('clientes', this)">
+            <i data-lucide="users"></i> Clientes
+          </a>
+          <a class="dash-nav-item" onclick="dashTab('ganhos', this)">
+            <i data-lucide="trending-up"></i> Ganhos
+          </a>
+          <a class="dash-nav-item" onclick="dashTab('perfil', this)">
+            <i data-lucide="user"></i> Meu perfil
+          </a>
+        </nav>
+        <button class="dash-logout" onclick="logout()">
+          <i data-lucide="log-out"></i> Sair
+        </button>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="dash-main">
+
+        <!-- TOPBAR -->
+        <div class="dash-topbar">
+          <div style="display:flex;align-items:center;gap:14px">
+            <button class="dash-mobile-toggle" id="dashMobileToggle" onclick="toggleDashMenu()">
+              <span></span><span></span><span></span>
+            </button>
+            <div>
+              <h1 class="dash-title" id="dashTabTitle">Visão geral</h1>
+              <p class="dash-subtitle">Sábado, 7 de março de 2026</p>
+            </div>
+          </div>
+          <div class="dash-topbar-actions">
+            <div class="dash-notif">
+              <i data-lucide="bell"></i>
+              <span class="notif-badge">3</span>
+            </div>
+          </div>
+        </div>
+        <div class="dash-overlay" id="dashOverlay" onclick="toggleDashMenu()"></div>
+
+        <!-- TAB: OVERVIEW -->
+        <div id="dashOverview">
+
+          <!-- Cards de métrica -->
+          <div class="dash-metrics">
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-green"><i data-lucide="calendar-check"></i></div>
+              <div>
+                <span class="metric-value">8</span>
+                <span class="metric-label">Atendimentos este mês</span>
+              </div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-blue"><i data-lucide="users"></i></div>
+              <div>
+                <span class="metric-value">23</span>
+                <span class="metric-label">Clientes ativos</span>
+              </div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-yellow"><i data-lucide="star"></i></div>
+              <div>
+                <span class="metric-value">4.9</span>
+                <span class="metric-label">Avaliação média</span>
+              </div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-purple"><i data-lucide="banknote"></i></div>
+              <div>
+                <span class="metric-value">R$ 2.840</span>
+                <span class="metric-label">Ganhos no mês</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid principal -->
+          <div class="dash-grid">
+
+            <!-- Próximos atendimentos -->
+            <div class="dash-card dash-card-wide">
+              <div class="dash-card-header">
+                <h3>Próximos atendimentos</h3>
+                <span class="dash-tag">Hoje</span>
+              </div>
+              <div class="dash-appointments">
+                <div class="appt-item appt-hoje">
+                  <div class="appt-time">09:00</div>
+                  <div class="appt-info">
+                    <strong>Maria Oliveira</strong>
+                    <span>Fisioterapia pós-cirúrgica — 60 min</span>
+                  </div>
+                  <span class="appt-status status-confirmado">Confirmado</span>
+                </div>
+                <div class="appt-item">
+                  <div class="appt-time">11:00</div>
+                  <div class="appt-info">
+                    <strong>José Pereira</strong>
+                    <span>Reabilitação ortopédica — 45 min</span>
+                  </div>
+                  <span class="appt-status status-confirmado">Confirmado</span>
+                </div>
+                <div class="appt-item">
+                  <div class="appt-time">14:30</div>
+                  <div class="appt-info">
+                    <strong>Ana Costa</strong>
+                    <span>Avaliação inicial — 30 min</span>
+                  </div>
+                  <span class="appt-status status-pendente">Pendente</span>
+                </div>
+                <div class="appt-item">
+                  <div class="appt-time">16:00</div>
+                  <div class="appt-info">
+                    <strong>Bruno Lima</strong>
+                    <span>Fisioterapia respiratória — 60 min</span>
+                  </div>
+                  <span class="appt-status status-confirmado">Confirmado</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Avaliações recentes -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Avaliações recentes</h3>
+              </div>
+              <div class="dash-reviews">
+                <div class="review-item">
+                  <div class="review-avatar">M</div>
+                  <div class="review-body">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Profissional excelente, muito atencioso!"</p>
+                    <span>Maria O. — 2 dias atrás</span>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <div class="review-avatar">J</div>
+                  <div class="review-body">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Minha recuperação foi muito mais rápida!"</p>
+                    <span>José P. — 5 dias atrás</span>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <div class="review-avatar">L</div>
+                  <div class="review-body">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Ótimo atendimento, recomendo!"</p>
+                    <span>Luiza M. — 1 semana atrás</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ganhos da semana (gráfico visual) -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Ganhos da semana</h3>
+                <span class="dash-tag dash-tag-green">+12%</span>
+              </div>
+              <div class="dash-chart">
+                <div class="chart-bars">
+                  <div class="chart-bar-wrap">
+                    <div class="chart-bar" style="height:40%"></div>
+                    <span>Seg</span>
+                  </div>
+                  <div class="chart-bar-wrap">
+                    <div class="chart-bar" style="height:70%"></div>
+                    <span>Ter</span>
+                  </div>
+                  <div class="chart-bar-wrap">
+                    <div class="chart-bar" style="height:55%"></div>
+                    <span>Qua</span>
+                  </div>
+                  <div class="chart-bar-wrap">
+                    <div class="chart-bar" style="height:90%"></div>
+                    <span>Qui</span>
+                  </div>
+                  <div class="chart-bar-wrap">
+                    <div class="chart-bar" style="height:65%"></div>
+                    <span>Sex</span>
+                  </div>
+                  <div class="chart-bar-wrap">
+                    <div class="chart-bar chart-bar-today" style="height:80%"></div>
+                    <span>Sáb</span>
+                  </div>
+                </div>
+                <div class="chart-total">Total: <strong>R$ 710</strong> esta semana</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TAB: AGENDA -->
+        <div id="dashAgenda" style="display:none">
+          <div class="dash-card" style="max-width:700px">
+            <div class="dash-card-header">
+              <h3>Agenda — Março 2026</h3>
+              <div style="display:flex;gap:8px">
+                <button class="dash-btn-sec">&lt;</button>
+                <button class="dash-btn-sec">&gt;</button>
+              </div>
+            </div>
+            <div class="dash-calendar">
+              <div class="cal-header">
+                <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+              </div>
+              <div class="cal-grid">
+                <span class="cal-empty"></span><span class="cal-empty"></span><span class="cal-empty"></span><span class="cal-empty"></span><span class="cal-empty"></span><span class="cal-empty"></span>
+                <span class="cal-day cal-has-appt">1</span>
+                <span class="cal-day">2</span>
+                <span class="cal-day cal-has-appt">3</span>
+                <span class="cal-day cal-has-appt">4</span>
+                <span class="cal-day">5</span>
+                <span class="cal-day cal-has-appt">6</span>
+                <span class="cal-day cal-today">7</span>
+                <span class="cal-day">8</span>
+                <span class="cal-day">9</span>
+                <span class="cal-day cal-has-appt">10</span>
+                <span class="cal-day">11</span>
+                <span class="cal-day cal-has-appt">12</span>
+                <span class="cal-day cal-has-appt">13</span>
+                <span class="cal-day">14</span>
+                <span class="cal-day">15</span>
+                <span class="cal-day cal-has-appt">16</span>
+                <span class="cal-day">17</span>
+                <span class="cal-day">18</span>
+                <span class="cal-day cal-has-appt">19</span>
+                <span class="cal-day">20</span>
+                <span class="cal-day">21</span>
+                <span class="cal-day cal-has-appt">22</span>
+                <span class="cal-day">23</span>
+                <span class="cal-day cal-has-appt">24</span>
+                <span class="cal-day">25</span>
+                <span class="cal-day">26</span>
+                <span class="cal-day cal-has-appt">27</span>
+                <span class="cal-day">28</span>
+                <span class="cal-day">29</span>
+                <span class="cal-day">30</span>
+                <span class="cal-day">31</span>
+              </div>
+            </div>
+            <p style="font-size:13px;color:var(--text-muted);margin-top:12px">
+              <i data-lucide="info" style="width:14px;height:14px;vertical-align:middle"></i>
+              Dias em verde têm atendimentos agendados
+            </p>
+          </div>
+        </div>
+
+        <!-- TAB: CLIENTES -->
+        <div id="dashClientes" style="display:none">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Meus clientes</h3>
+              <input type="text" placeholder="Buscar cliente..." class="dash-search">
+            </div>
+            <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Serviço</th>
+                  <th>Próximo agendamento</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="table-avatar">M</span> Maria Oliveira</td>
+                  <td>Fisioterapia pós-cirúrgica</td>
+                  <td>Hoje, 09:00</td>
+                  <td><span class="appt-status status-confirmado">Ativo</span></td>
+                </tr>
+                <tr>
+                  <td><span class="table-avatar">J</span> José Pereira</td>
+                  <td>Reabilitação ortopédica</td>
+                  <td>Hoje, 11:00</td>
+                  <td><span class="appt-status status-confirmado">Ativo</span></td>
+                </tr>
+                <tr>
+                  <td><span class="table-avatar">A</span> Ana Costa</td>
+                  <td>Avaliação inicial</td>
+                  <td>Hoje, 14:30</td>
+                  <td><span class="appt-status status-pendente">Novo</span></td>
+                </tr>
+                <tr>
+                  <td><span class="table-avatar">B</span> Bruno Lima</td>
+                  <td>Fisioterapia respiratória</td>
+                  <td>Hoje, 16:00</td>
+                  <td><span class="appt-status status-confirmado">Ativo</span></td>
+                </tr>
+                <tr>
+                  <td><span class="table-avatar">L</span> Luiza Martins</td>
+                  <td>Reabilitação neurológica</td>
+                  <td>10/03, 10:00</td>
+                  <td><span class="appt-status status-confirmado">Ativo</span></td>
+                </tr>
+                <tr>
+                  <td><span class="table-avatar">R</span> Roberto Alves</td>
+                  <td>Fisioterapia domiciliar</td>
+                  <td>12/03, 09:00</td>
+                  <td><span class="appt-status status-confirmado">Ativo</span></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: GANHOS -->
+        <div id="dashGanhos" style="display:none">
+          <div class="dash-metrics" style="margin-bottom:24px">
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-green"><i data-lucide="banknote"></i></div>
+              <div>
+                <span class="metric-value">R$ 2.840</span>
+                <span class="metric-label">Este mês</span>
+              </div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-blue"><i data-lucide="trending-up"></i></div>
+              <div>
+                <span class="metric-value">R$ 22.100</span>
+                <span class="metric-label">Acumulado 2026</span>
+              </div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-purple"><i data-lucide="calendar-check"></i></div>
+              <div>
+                <span class="metric-value">R$ 355</span>
+                <span class="metric-label">Média por atendimento</span>
+              </div>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Histórico de pagamentos</h3></div>
+            <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr><th>Data</th><th>Cliente</th><th>Serviço</th><th>Valor</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>07/03</td><td>Maria O.</td><td>Fisioterapia</td><td><strong>R$ 180</strong></td><td><span class="appt-status status-confirmado">Pago</span></td></tr>
+                <tr><td>06/03</td><td>Bruno L.</td><td>Fisioterapia</td><td><strong>R$ 180</strong></td><td><span class="appt-status status-confirmado">Pago</span></td></tr>
+                <tr><td>05/03</td><td>José P.</td><td>Reabilitação</td><td><strong>R$ 220</strong></td><td><span class="appt-status status-confirmado">Pago</span></td></tr>
+                <tr><td>04/03</td><td>Luiza M.</td><td>Neurológica</td><td><strong>R$ 250</strong></td><td><span class="appt-status status-confirmado">Pago</span></td></tr>
+                <tr><td>03/03</td><td>Roberto A.</td><td>Domiciliar</td><td><strong>R$ 160</strong></td><td><span class="appt-status status-pendente">Pendente</span></td></tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: PERFIL -->
+        <div id="dashPerfil" style="display:none">
+          <div class="dash-grid">
+            <div class="dash-card dash-card-wide">
+              <div class="dash-card-header"><h3>Meu perfil público</h3></div>
+              <div class="profile-view">
+                <div class="profile-avatar-lg">C</div>
+                <div class="profile-info">
+                  <h2>Carlos Mendes</h2>
+                  <p class="profile-role">Fisioterapeuta • CREFITO 12345-F</p>
+                  <div class="profile-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.9 (38 avaliações)</span></div>
+                  <p style="margin-top:12px;color:var(--text-muted);font-size:14px;line-height:1.6">
+                    Fisioterapeuta com 8 anos de experiência em reabilitação ortopédica, neurológica e respiratória.
+                    Atendimento domiciliar na Grande São Paulo.
+                  </p>
+                  <div class="profile-tags">
+                    <span>Ortopédica</span>
+                    <span>Neurológica</span>
+                    <span>Respiratória</span>
+                    <span>Domiciliar</span>
+                    <span>Idosos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header"><h3>Disponibilidade</h3></div>
+              <div class="avail-grid">
+                <div class="avail-row"><span>Segunda</span><span class="avail-on">08:00 – 17:00</span></div>
+                <div class="avail-row"><span>Terça</span><span class="avail-on">08:00 – 17:00</span></div>
+                <div class="avail-row"><span>Quarta</span><span class="avail-on">08:00 – 17:00</span></div>
+                <div class="avail-row"><span>Quinta</span><span class="avail-on">08:00 – 17:00</span></div>
+                <div class="avail-row"><span>Sexta</span><span class="avail-on">08:00 – 14:00</span></div>
+                <div class="avail-row"><span>Sábado</span><span class="avail-on">09:00 – 12:00</span></div>
+                <div class="avail-row"><span>Domingo</span><span class="avail-off">Indisponível</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+  <!-- ==================== FIM DASHBOARD ==================== -->
+
+  <!-- ==================== DASHBOARD CLIENTE ==================== -->
+  <div id="dashCliente" class="hidden">
+    <div class="dash-layout">
+      <aside class="dash-sidebar">
+        <div class="dash-logo">Life<span>Hub</span></div>
+        <div class="dash-profile">
+          <div class="dash-avatar" id="clienteAvatar">M</div>
+          <div>
+            <strong id="clienteNome">Maria</strong>
+            <span>Cliente LifeHub</span>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <a class="dash-nav-item active" onclick="clienteTab('inicio', this)">
+            <i data-lucide="layout-dashboard"></i> Início
+          </a>
+          <a class="dash-nav-item" onclick="clienteTab('agendamentos', this)">
+            <i data-lucide="calendar-clock"></i> Agendamentos
+          </a>
+          <a class="dash-nav-item" onclick="clienteTab('plano', this)">
+            <i data-lucide="shield-check"></i> Meu plano
+          </a>
+          <a class="dash-nav-item" onclick="clienteTab('perfil', this)">
+            <i data-lucide="user"></i> Perfil
+          </a>
+        </nav>
+        <button class="dash-logout" onclick="logoutCliente()">
+          <i data-lucide="log-out"></i> Sair
+        </button>
+      </aside>
+
+      <main class="dash-main">
+        <div class="dash-topbar">
+          <div style="display:flex;align-items:center;gap:14px">
+            <button class="dash-mobile-toggle" onclick="toggleClienteMenu()"><span></span><span></span><span></span></button>
+            <div>
+              <h1 class="dash-title" id="clienteTabTitle">Início</h1>
+              <p class="dash-subtitle">Sábado, 7 de março de 2026</p>
+            </div>
+          </div>
+          <div class="dash-topbar-actions">
+            <div class="dash-notif"><i data-lucide="bell"></i><span class="notif-badge">1</span></div>
+          </div>
+        </div>
+        <div class="dash-overlay" id="dashClienteOverlay" onclick="toggleClienteMenu()"></div>
+
+        <!-- TAB: INÍCIO -->
+        <div id="cInicio">
+          <div class="dash-metrics">
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-green"><i data-lucide="calendar-check"></i></div>
+              <div><span class="metric-value">3</span><span class="metric-label">Agendamentos ativos</span></div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-blue"><i data-lucide="clock"></i></div>
+              <div><span class="metric-value">12</span><span class="metric-label">Serviços realizados</span></div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-yellow"><i data-lucide="star"></i></div>
+              <div><span class="metric-value">4.8</span><span class="metric-label">Sua avaliação média</span></div>
+            </div>
+            <div class="dash-metric-card">
+              <div class="metric-icon metric-purple"><i data-lucide="shield-check"></i></div>
+              <div><span class="metric-value" id="clientePlanoMetric">Família</span><span class="metric-label">Plano atual</span></div>
+            </div>
+          </div>
+
+          <div class="dash-grid">
+            <div class="dash-card">
+              <div class="dash-card-header"><h3>Próximos agendamentos</h3><button class="dash-btn-sec" onclick="clienteTab('agendamentos', document.querySelector('.dash-nav-item:nth-child(2)'))">Ver todos</button></div>
+              <div class="appt-list">
+                <div class="appt-item"><div class="appt-dot dot-green"></div><div class="appt-info"><strong>Massagem Terapêutica</strong><span>Hoje, 15:00 — Dra. Fernanda</span></div><span class="appt-status status-confirmado">Confirmado</span></div>
+                <div class="appt-item"><div class="appt-dot dot-blue"></div><div class="appt-info"><strong>Nutricionista</strong><span>10/03, 10:00 — Dr. Lucas</span></div><span class="appt-status status-confirmado">Confirmado</span></div>
+                <div class="appt-item"><div class="appt-dot dot-yellow"></div><div class="appt-info"><strong>Personal Trainer</strong><span>12/03, 07:00 — Prof. André</span></div><span class="appt-status status-pendente">Pendente</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header"><h3>Profissionais favoritos</h3></div>
+              <div class="appt-list">
+                <div class="appt-item"><div class="table-avatar">F</div><div class="appt-info"><strong>Dra. Fernanda Lima</strong><span>Massagista · ★★★★★</span></div><button class="dash-btn-sec" onclick="openAgendamento('Massagem Terapêutica')">Agendar</button></div>
+                <div class="appt-item"><div class="table-avatar">L</div><div class="appt-info"><strong>Dr. Lucas Rocha</strong><span>Nutricionista · ★★★★★</span></div><button class="dash-btn-sec" onclick="openAgendamento('Nutricionista')">Agendar</button></div>
+                <div class="appt-item"><div class="table-avatar">A</div><div class="appt-info"><strong>Prof. André Costa</strong><span>Personal Trainer · ★★★★☆</span></div><button class="dash-btn-sec" onclick="openAgendamento('Personal Trainer')">Agendar</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: AGENDAMENTOS -->
+        <div id="cAgendamentos" style="display:none">
+          <div class="dash-card" style="margin-bottom:16px">
+            <div class="dash-card-header"><h3>Agendamentos ativos</h3><button class="btn btn-primary" style="font-size:13px;padding:8px 18px" onclick="showPage('services')">+ Novo agendamento</button></div>
+            <div class="appt-list">
+              <div class="appt-item"><div class="appt-dot dot-green"></div><div class="appt-info"><strong>Massagem Terapêutica</strong><span>Hoje, 15:00 — Dra. Fernanda Lima · Rua das Flores, 120</span></div><span class="appt-status status-confirmado">Confirmado</span></div>
+              <div class="appt-item"><div class="appt-dot dot-blue"></div><div class="appt-info"><strong>Nutricionista</strong><span>10/03, 10:00 — Dr. Lucas Rocha · Av. Paulista, 900</span></div><span class="appt-status status-confirmado">Confirmado</span></div>
+              <div class="appt-item"><div class="appt-dot dot-yellow"></div><div class="appt-info"><strong>Personal Trainer</strong><span>12/03, 07:00 — Prof. André Costa · Academia Central</span></div><span class="appt-status status-pendente">Pendente</span></div>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Histórico</h3></div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead><tr><th>Data</th><th>Serviço</th><th>Profissional</th><th>Avaliação</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>01/03</td><td>Massagem Terapêutica</td><td>Dra. Fernanda</td><td>★★★★★</td><td><span class="appt-status status-confirmado">Concluído</span></td></tr>
+                  <tr><td>22/02</td><td>Nutricionista</td><td>Dr. Lucas</td><td>★★★★★</td><td><span class="appt-status status-confirmado">Concluído</span></td></tr>
+                  <tr><td>15/02</td><td>Cuidador de Idosos</td><td>Ana Beatriz</td><td>★★★★☆</td><td><span class="appt-status status-confirmado">Concluído</span></td></tr>
+                  <tr><td>08/02</td><td>Personal Trainer</td><td>Prof. André</td><td>★★★★★</td><td><span class="appt-status status-confirmado">Concluído</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: PLANO -->
+        <div id="cPlano" style="display:none">
+          <div class="dash-grid">
+            <div class="dash-card">
+              <div class="dash-card-header"><h3>Plano atual</h3></div>
+              <div class="cliente-plano-box">
+                <div class="cliente-plano-badge"><i data-lucide="shield-check"></i> Plano Família</div>
+                <div class="cliente-plano-preco">R$ 89<span>/mês</span></div>
+                <ul class="cliente-plano-features">
+                  <li><i data-lucide="check" class="icon-xs"></i> 10% de desconto em todos os serviços</li>
+                  <li><i data-lucide="check" class="icon-xs"></i> 2 visitas incluídas por mês</li>
+                  <li><i data-lucide="check" class="icon-xs"></i> Agendamento recorrente</li>
+                  <li><i data-lucide="check" class="icon-xs"></i> Suporte prioritário</li>
+                  <li><i data-lucide="check" class="icon-xs"></i> Histórico completo</li>
+                </ul>
+                <div class="cliente-plano-renova">Renova em: <strong>07/04/2026</strong></div>
+                <div style="display:flex;gap:10px;margin-top:16px">
+                  <button class="btn btn-primary" style="flex:1" onclick="showPage('plans')">Fazer upgrade</button>
+                  <button class="dash-btn-sec" style="flex:1;padding:10px">Cancelar plano</button>
+                </div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header"><h3>Uso do plano — março</h3></div>
+              <div class="plano-uso-item"><span>Visitas incluídas usadas</span><div class="plano-uso-bar"><div class="plano-uso-fill" style="width:50%"></div></div><span>1 / 2</span></div>
+              <div class="plano-uso-item" style="margin-top:16px"><span>Total de agendamentos</span><div class="plano-uso-bar"><div class="plano-uso-fill plano-uso-blue" style="width:60%"></div></div><span>3 / 5</span></div>
+              <div class="dash-card-header" style="margin-top:24px"><h3>Histórico de cobranças</h3></div>
+              <div class="dash-table-wrap">
+                <table class="dash-table">
+                  <thead><tr><th>Data</th><th>Descrição</th><th>Valor</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td>07/03</td><td>Plano Família</td><td><strong>R$ 89</strong></td><td><span class="appt-status status-confirmado">Pago</span></td></tr>
+                    <tr><td>07/02</td><td>Plano Família</td><td><strong>R$ 89</strong></td><td><span class="appt-status status-confirmado">Pago</span></td></tr>
+                    <tr><td>07/01</td><td>Plano Família</td><td><strong>R$ 89</strong></td><td><span class="appt-status status-confirmado">Pago</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: PERFIL -->
+        <div id="cPerfil" style="display:none">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Meus dados</h3><button class="dash-btn-sec">Editar</button></div>
+            <div class="profile-view">
+              <div class="profile-avatar-lg" id="clienteAvatarPerfil">M</div>
+              <div class="profile-info">
+                <h2 id="clienteNomePerfil">Maria Silva</h2>
+                <p class="profile-role" id="clienteEmailPerfil">maria@email.com</p>
+                <p class="profile-role">Membro desde janeiro de 2025</p>
+                <div class="profile-tags">
+                  <span>Plano Família</span>
+                  <span>12 serviços</span>
+                  <span>Cliente verificado</span>
+                </div>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+              <div class="form-group"><label>Nome completo</label><input type="text" value="Maria Silva" style="background:#f9fafb;border-color:#eee"></div>
+              <div class="form-group"><label>Telefone</label><input type="tel" value="(11) 98765-4321" style="background:#f9fafb;border-color:#eee"></div>
+              <div class="form-group"><label>Email</label><input type="email" id="clienteEmailInput" style="background:#f9fafb;border-color:#eee"></div>
+              <div class="form-group"><label>CEP</label><input type="text" value="01310-100" style="background:#f9fafb;border-color:#eee"></div>
+              <div class="form-group" style="grid-column:1/-1"><label>Endereço</label><input type="text" value="Rua das Flores, 120 — São Paulo, SP" style="background:#f9fafb;border-color:#eee"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <!-- ==================== FIM DASHBOARD CLIENTE ==================== -->
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo">Life<span>Hub</span></div>
+        <p>Cuidando de quem mais importa para você. Saúde, família e pets em um só lugar.</p>
+        <div class="social-links">
+          <a class="social-link" title="Instagram"><i data-lucide="instagram" class="icon-sm"></i></a>
+          <a class="social-link" title="Facebook"><i data-lucide="facebook" class="icon-sm"></i></a>
+          <a class="social-link" title="Twitter"><i data-lucide="twitter" class="icon-sm"></i></a>
+          <a class="social-link" title="LinkedIn"><i data-lucide="linkedin" class="icon-sm"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a onclick="showPage('services')">Cuidado Pessoal</a></li>
+          <li><a onclick="showPage('services')">Cuidado com Idosos</a></li>
+          <li><a onclick="showPage('services')">Cuidado com Pets</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a onclick="showPage('about')">Sobre nós</a></li>
+          <li><a onclick="showPage('plans')">Planos</a></li>
+          <li><a href="#">Carreiras</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>LifeHub © 2026 — Cuidando de quem mais importa para você. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i data-lucide="chevron-up" class="icon-md"></i>
+  </button>
+
+  <!-- MODAL AGENDAMENTO -->
+  <div class="modal-overlay" id="modalAgendamento" onclick="closeAgendamento(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeAgendamento()">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><i data-lucide="calendar-plus"></i></div>
+        <div>
+          <h3 class="modal-title">Agendar serviço</h3>
+          <p class="modal-service-name" id="modalServiceName">Massagem Terapêutica</p>
+        </div>
+      </div>
+      <form class="modal-form" onsubmit="submitAgendamento(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Seu nome</label>
+            <input type="text" id="agNome" placeholder="Maria Silva" required>
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" id="agTelefone" placeholder="(11) 99999-9999" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Data</label>
+            <input type="date" id="agData" required>
+          </div>
+          <div class="form-group">
+            <label>Horário</label>
+            <select id="agHorario" required>
+              <option value="">Selecione</option>
+              <option>08:00</option><option>09:00</option><option>10:00</option>
+              <option>11:00</option><option>13:00</option><option>14:00</option>
+              <option>15:00</option><option>16:00</option><option>17:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Endereço de atendimento</label>
+          <input type="text" id="agEndereco" placeholder="Rua, número, bairro" required>
+        </div>
+        <div class="form-group">
+          <label>Observações <span style="color:var(--text-muted);font-weight:400">(opcional)</span></label>
+          <textarea id="agObs" placeholder="Informações adicionais para o profissional..." rows="3"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeAgendamento()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" id="agSubmitBtn">Confirmar agendamento</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMAÇÃO -->
+  <div class="modal-overlay" id="modalConfirmacao" onclick="closeConfirmacao(event)">
+    <div class="modal-box modal-box-sm">
+      <div class="modal-confirm-icon">
+        <i data-lucide="circle-check-big"></i>
+      </div>
+      <h3>Agendamento solicitado!</h3>
+      <p id="modalConfirmText">Entraremos em contato para confirmar seu horário em até 30 minutos.</p>
+      <div class="modal-confirm-detail" id="modalConfirmDetail"></div>
+      <button class="btn btn-primary" style="width:100%;margin-top:20px" onclick="closeConfirmacao()">Ótimo, entendido!</button>
+    </div>
+  </div>
+
+  <!-- LUCIDE ICONS (SVG) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- APP SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
